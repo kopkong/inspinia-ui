@@ -1,0 +1,65 @@
+@import '../../assets/styles/modules/variables';
+
+.modal-container {
+  background-color: $color-bg;
+  color: $color-text;
+  border-radius: $font-base/2;
+  box-sizing: border-box;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transition: all $duration ease-in-out;
+  transform: translate3d(-50%, -50%, 0) scale(0);
+  z-index: $z-pop;
+  overflow: auto;
+}
+
+.modal-dialog-opened {
+  transform: translate3d(-50%, -50%, 0) scale(1);
+}
+
+.modal-dialog-content {
+  color: $color-primary;
+  font-size: $font-base;
+  line-height: 1.5;
+  text-align: center;
+  padding: $font-base / 2;
+}
+
+.modal-dialog-footer {
+  font-size: $font-base;
+  line-height: 1.5;
+  border-top: 1px solid $color-border;
+
+  button {
+    padding: 10px;
+    font-size: $font-base;
+    background: $color-bg;
+    color: $color-text;
+  }
+}
+
+.modal-dialog-cancel, .modal-dialog-confirm {
+  width: 50%;
+  border: 0;
+}
+
+.modal-dialog-cancel {
+  border-right: 1px solid $color-border;
+}
+
+.modal-dialog-ok {
+  width: 100%;
+  border: 0;
+}
+
+.masked {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: $color-mask;
+  z-index: $z-mask;
+}
