@@ -14,6 +14,11 @@ const path = require('path'),
 
 app.use(express.static(__dirname));
 
+// 在 index.html 中处理任何一个 route
+// app.get('*', function (request, response){
+//     response.sendFile(path.resolve(__dirname, 'index.html'))
+// });
+
 app.use(webpackDevMiddleware(compiler, {
     noInfo: false,
     stats: {

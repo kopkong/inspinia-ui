@@ -1,0 +1,34 @@
+@import '../../styles/_mixin';
+
+.title-bar {
+  background: #fff;
+  border-bottom: 1px solid #e7eaec;
+  @include defaultPadding();
+
+  h1 {
+    font-weight: 200;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .catalog {
+    font-size: 12px;
+    font-weight: 100;
+
+    a, span {
+      color: inherit;
+      margin-right: 10px;
+    }
+
+    span::before {
+      content: '/\00a0';
+      color: #ccc;
+      margin-right: 10px;
+      font-weight: 100;
+    }
+
+    span:last-of-type {
+      font-weight: 600;
+    }
+  }
+}

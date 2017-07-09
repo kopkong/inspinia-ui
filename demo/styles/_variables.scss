@@ -1,0 +1,73 @@
+// colors
+$controlPalette: (
+  default : #fff,
+  default-text : inherit,
+  defualt-border : #e7eaec,
+  primary : #1ab394,
+  primary-text : #fff,
+  primary-border : #1ab394,
+  success : #1c84c6,
+  success-text : #fff,
+  success-border : #1c84c6,
+  info : #23c6c8,
+  info-text : #fff,
+  info-border : #23c6c8,
+  warning : #f8ac59,
+  warning-text : #fff,
+  warning-border : #f8ac59,
+  danger : #ed5565,
+  danger-text : #fff,
+  danger-border : #ed5565,
+  link : transparent,
+  link-text : inherit,
+  link-border : transparent,
+  side : #283A49,
+  side-text : #a7b1c2,
+  side-border : #283A49,
+);
+
+$controlPalette-hover: (
+  default : #e6e6e6,
+  default-text : inherit,
+  defualt-border : #d2d2d2,
+  primary : #18a689,
+  primary-text : #fff,
+  primary-border : #18a689,
+  success : #1a7bb9,
+  success-text : #fff,
+  success-border : #1a7bb9,
+  info : #21b9bb,
+  info-text : #fff,
+  info-border : #21b9bb,
+  warning : #f7a54a,
+  warning-text : #fff,
+  warning-border : #f7a54a,
+  danger : #ec4758,
+  danger-text : #fff,
+  danger-border : #ec4758,
+  link : transparent,
+  link-text : #1ab394,
+  link-border : transparent,
+  side : #293846,
+  side-text : #fff,
+  side-border : #293846,
+);
+
+// screen-size
+$large-screen: 768px;
+$side-bar-width: 220px;
+
+// colors
+$color-bg: #f3f3f4;
+
+// animation
+$animation-fast: 300ms;
+$animation-slow: 600ms;
+
+// padding
+$padding: (
+  left: 25px,
+  top: 20px,
+  right: 25px,
+  bottom: 20px
+);

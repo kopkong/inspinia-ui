@@ -1,18 +1,96 @@
-@import '../../assets/styles/modules/_variables';
+@import '../styles/modules/_variables';
+@import '../styles/modules/_mixin';
 
-
-.button-default {
-  background: $color-primary;
-  color: $color-bg;
-  border: 0;
-  font-size: $font-base;
-  line-height: $font-base * 2;
+.btn {
+  display: inline-block;
+  vertical-align: middle;
   text-align: center;
-  padding: 0 $padding-control;
+  white-space: nowrap;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #ccc;
 }
 
-.button-default-radius {
-  @extend .button-default;
-  border: 1px solid $color-bg;
-  border-radius: $font-base * 2;
+.btn-size-default {
+  @extend .btn;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42;
+}
+
+.btn-size-large {
+  @extend .btn;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+.btn-size-small {
+  @extend .btn;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.btn-size-mini {
+  @extend .btn;
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.btn-default {
+  @include getTheme('default');
+}
+
+.btn-primary {
+  @include getTheme('primary');
+}
+
+.btn-success {
+  @include getTheme('success');
+}
+
+.btn-info {
+  @include getTheme('info');
+}
+
+.btn-warning {
+  @include getTheme('warning');
+}
+
+.btn-danger {
+  @include getTheme('danger');
+}
+
+.btn-link {
+  @include getTheme('link');
+}
+
+.btn-default-outline {
+  @include getOutlineButtonTheme('default');
+}
+
+.btn-primary-outline {
+  @include getOutlineButtonTheme('primary');
+}
+
+.btn-success-outline {
+  @include getOutlineButtonTheme('success');
+}
+
+.btn-info-outline {
+  @include getOutlineButtonTheme('info');
+}
+
+.btn-warning-outline {
+  @include getOutlineButtonTheme('warning');
+}
+
+.btn-danger-outline {
+  @include getOutlineButtonTheme('danger');
+}
+
+.btn-link-outline {
+  @include getOutlineButtonTheme('link');
 }

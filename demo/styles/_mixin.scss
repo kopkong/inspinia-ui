@@ -1,0 +1,35 @@
+@import 'variables';
+
+@mixin getTheme($themeName) {
+  background: map-get($controlPalette, $themeName);
+  color: map-get($controlPalette, $themeName + '-text');
+  border-color: map-get($controlPalette, $themeName + '-border');
+
+  &:hover {
+    background: map-get($controlPalette-hover, $themeName);
+    color: map-get($controlPalette-hover, $themeName + '-text');
+    border-color: map-get($controlPalette-hover, $themeName + '-border');
+  }
+}
+
+@mixin defaultPadding(){
+  padding: map-get($padding,top) map-get($padding,right) map-get($padding,bottom) map-get($padding,left);
+}
+
+@mixin onLargeScreen() {
+  @media screen and (min-width: $large-screen) {
+    @content;
+  }
+}
+
+@mixin onSmallScreen() {
+  @media screen and (max-width: $large-screen) {
+    @content;
+  }
+}
+
+@mixin hoverCursor() {
+  &:hover{
+    cursor: pointer;
+  }
+}

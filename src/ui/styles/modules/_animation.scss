@@ -1,0 +1,45 @@
+@import 'variables';
+
+.collapsed {
+  height: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+}
+
+.expanded {
+  height: auto;
+  transform: scaleY(1);
+  transform-origin: 0 0;
+}
+
+.collapsed-slow {
+  @extend .collapsed;
+  transition: transform $animation-slow linear;
+}
+
+.collapsed-fast {
+  @extend .collapsed;
+  transition: transform $animation-fast linear;
+}
+
+.collapsed-very-fast{
+  @extend .collapsed;
+  transition: transform $animation-veryFast linear;
+}
+
+.expanded-slow {
+  @extend .expanded;
+  transition: transform $animation-slow linear;
+}
+
+.expanded-fast {
+  @extend .expanded;
+  transition: transform $animation-fast linear;
+}
+
+.expanded-very-fast {
+  @extend .expanded;
+  transition: transform $animation-veryFast linear;
+}

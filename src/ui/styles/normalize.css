@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/**
+ * Global settings
+ */
+@-ms-viewport {
+  width: device-width; }
+*,
+*::before,
+*::after {
+  border: 0 solid;
+  box-sizing: border-box;
+  font: inherit;
+  line-height: inherit;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent; }
+
+html {
+  height: 100%;
+  -ms-overflow-style: scrollbar; }
+
+body {
+  min-height: 100%;
+  position: relative; }
+
+/**
+ * Text
+ */
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft YaHei", "微软雅黑", sans-serif;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+a {
+  cursor: pointer;
+  text-decoration: none; }
+a:link, a:visited {
+  color: currentColor; }
+
+abbr[title] {
+  cursor: help; }
+
+b,
+strong {
+  font-weight: 700; }
+
+hr {
+  border-width: 1px 0 0; }
+
+ol,
+ul {
+  list-style: none; }
+
+/**
+ * Table
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 100%; }
+
+th {
+  text-align: left; }
+
+/**
+ * Form
+ */
+button,
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="file"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
+  color: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  outline: 0; }
+
+button {
+  cursor: pointer; }
+button:disabled {
+  cursor: not-allowed; }
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none; }
+
+textarea {
+  resize: none; }
+
+[type=search] {
+  -webkit-appearance: textfield; }
+
+[type=number] {
+  -moz-appearance: textfield; }
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none; }
+
+::-webkit-search-cancel-button,
+::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+:invalid {
+  box-shadow: none; }

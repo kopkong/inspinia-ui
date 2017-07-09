@@ -6,52 +6,34 @@ import './button.scss';
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import MixClass from '../../util/mixClass';
 
-const defaultProps = {
-    label           : 'Button',
-    disabled        : false,
-    lock            : false,
-    className       : 'button-default'
-};
+export default function Button({
+  type = 'button',
+  style,
+  size,
+  className = '',
+  ...props
+}) {
 
-export default function Button(_props){
-    let props = {
-        ... defaultProps,
-        ... _props
-    };
+  let styleClass = style ? 'btn-' + style : 'btn-default';
+  let sizeClass  = size ? 'btn-size-' + size  : "btn-size-default";
 
+  let finalClass = [styleClass, sizeClass, className].join(' ');
 
-    function handleClick(){
-        if(props.locked) return;
-
-        if(props.onClick) {
-            props.onClick();
-        }
-
-        if(props.delay) {
-            props.locked = true;
-            setTimeout(()=>{
-                props.locked = false;
-            }, props.delay);
-        }
-    }
-
-    return (
-        <button
-            type="button"
-            className ={ props.className }
-            onClick ={ handleClick }
-            disabled ={ props.disabled }
-            >
-            {props.label}
-        </button>
-    );
+  return (
+    <button
+      type={type === 'submit' ? 'submit' : 'button'}
+      className = {finalClass}
+      {...props}
+    >
+      {props.children}
+    </button>
+  );
 }
 
 Button.propTypes = {
-    disabled        : PropTypes.bool,
-    className       : PropTypes.string,
-    label           : PropTypes.string,
-    onClick         : PropTypes.func,
-    delay           : PropTypes.number
+  type: PropTypes.string,
+  style: PropTypes.string,
+  size : PropTypes.string
 };

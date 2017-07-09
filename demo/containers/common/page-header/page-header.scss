@@ -1,0 +1,9 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixin';
+
+.page-header {
+  height: 60px;
+  border-bottom: 1px solid #e7eaec;
+  display: flex;
+  align-items: center;
+}

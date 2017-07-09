@@ -1,0 +1,16 @@
+@import '../../../styles/_variables';
+
+.ui-buttons {
+  button {
+    margin: 5px 2px;
+  }
+
+  .normal-buttons {
+    button{ min-width: 120px;}
+  }
+
+  .block-btn {
+    display: block;
+    width: 100%;
+  }
+}

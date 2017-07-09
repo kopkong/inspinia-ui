@@ -1,0 +1,75 @@
+@import '../../../styles/_variables';
+@import '../../../styles/_mixin';
+
+.side-bar {
+  position: absolute;
+  height: 100%;
+  background: map-get($controlPalette, side);
+
+  @include onLargeScreen() {
+    width: $side-bar-width;
+  }
+  @include onSmallScreen() {
+    display: none;
+  }
+
+  a {
+    @include getTheme(side);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 14px 0 14px 25px;
+    display: flex;
+
+    .title {
+      flex: 4;
+    }
+
+    .arrow {
+      flex: 1;
+      text-align: center;
+    }
+  }
+
+  li>a{
+    list-style: none;
+    display: block;
+    font-size: 12px;
+    padding: 7px 10px 7px 52px;
+  }
+
+  .active {
+    border-left: 4px solid #19aa8d;
+
+    .title{
+      color: map-get($controlPalette-hover, side-text);
+    }
+
+    a {
+      @include getTheme(side);
+    }
+  }
+}
+
+.side-bar-header {
+  height: 155px;
+
+  background: url('../../../assets/images/header-profile.png') repeat-y;
+}
+
+.sub-menu-container {
+  overflow: hidden;
+}
+
+.sub-menu-list {
+  height: 0;
+  overflow: hidden;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: transform .3s linear;
+}
+
+.enter {
+  height: auto;
+  transform: scaleY(1);
+}

@@ -22,12 +22,12 @@ let plugins = [
         }
     }),
     new HTMLPlugin({
-        template: path.resolve(__dirname, 'src/index.html.tpl'),
+        template: path.resolve(__dirname, 'demo/index.html.tpl'),
         filename: 'index.html'
     })
 ];
 
-let entry = [path.resolve(__dirname,'src/app.js')],
+let entry = [path.resolve(__dirname,'demo/app.js')],
     publicPath = 'build';
 
 if (nodeEnv === 'production') {
@@ -69,7 +69,8 @@ module.exports = {
         extensions: ['.js', '.jsx', '.less', '.scss', '.css'],
         modules: [
             path.resolve(__dirname, 'node_modules'),
-            path.resolve(__dirname, 'src')
+            path.resolve(__dirname, 'src'),
+            path.resolve(__dirname, 'demo')
         ]
     },
 

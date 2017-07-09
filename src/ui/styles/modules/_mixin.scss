@@ -1,0 +1,70 @@
+@import 'variables';
+
+@mixin getTheme($themeName) {
+  background: map-get($controlPalette, $themeName);
+  color: map-get($controlPalette, $themeName + '-text');
+  border-color: map-get($controlPalette, $themeName + '-border');
+
+  &:hover {
+    background: map-get($controlPalette-hover, $themeName);
+    color: map-get($controlPalette-hover, $themeName + '-text');
+    border-color: map-get($controlPalette-hover, $themeName + '-border');
+  }
+}
+
+@mixin getOutlineButtonTheme($themeName) {
+  @if $themeName == default {
+    color: map-get($controlPalette, default-text);
+    background: #fff;
+
+    &:hover {
+      background: map-get($controlPalette-hover, $themeName);
+      color: map-get($controlPalette-hover, $themeName + '-text');
+      border-color: map-get($controlPalette-hover, $themeName + '-border');
+    }
+  }
+  @else if $themeName == link {
+    color: map-get($controlPalette, default-text);
+    background: #fff;
+    border-color: map-get($controlPalette, link-border);
+  }
+  @else {
+    color: map-get($controlPalette, $themeName);
+    border-color: map-get($controlPalette, $themeName);
+    background: #fff;
+
+    &:hover {
+      background: map-get($controlPalette, $themeName);
+      color: map-get($controlPalette, $themeName + '-text');
+      border-color: map-get($controlPalette, $themeName + '-border');
+    }
+  }
+}
+
+@mixin hoverCursor() {
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+@mixin absolute($top:0, $left:0, $right:0, $bottom:0) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+
+@mixin fixed($top:0, $left:0, $right:0, $bottom:0) {
+  position: fixed;
+  z-index: map-get($layer,pop);
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+
+@mixin flexLeftRight() {
+  display: flex;
+  justify-content: center;
+}
